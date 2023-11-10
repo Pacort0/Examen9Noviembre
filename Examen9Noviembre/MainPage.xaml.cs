@@ -33,7 +33,7 @@ namespace Examen9Noviembre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Caseta2_Clicked(object sender, EventArgs e)
+        private void Caseta_Clicked(object sender, EventArgs e)
         {
             aciertoCaseta(); //Llama al método 'aciertoCaseta'
         }
@@ -42,47 +42,21 @@ namespace Examen9Noviembre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Cuenco2_Clicked(object sender, EventArgs e)
+        private void Cuenco_Clicked(object sender, EventArgs e)
         {
             aciertoCuenco(); //Llama al método 'aciertoCuenco'
         }
         /// <summary>
-        /// Método llamado cuando se encuentra la diferencia en la espalda derecha
+        /// Método llamado cuando se encuentra la diferencia en la espalda 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Espalda2_Clicked(object sender, EventArgs e)
+        private void Espalda_Clicked(object sender, EventArgs e)
         {
             aciertoEspalda(); //Llama al método 'aciertoEspalda'
-        }
-        /// <summary>
-        /// Método llamado cuando se encuentra la diferencia en la caseta izquierda
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Caseta1_Clicked(object sender, EventArgs e)
-        {
-           aciertoCaseta(); //Llama al método 'aciertoCaseta'
         }
 
-        /// <summary>
-        /// Método llamado cuando se encuentra la diferencia en el cuenco izquierdo
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Cuenco1_Clicked(object sender, EventArgs e)
-        {
-            aciertoCuenco(); //Llama al método 'aciertoCuenco'
-        }
-        /// <summary>
-        /// Método llamado cuando se encuentra la diferencia en la espalda izquierda
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Espalda1_Clicked(object sender, EventArgs e)
-        {
-            aciertoEspalda(); //Llama al método 'aciertoEspalda'
-        }
+      
         /// <summary>
         /// Método que determina si la partida ya se ha perdido.
         /// En caso positivo, se muestra un mensaje de alerta para notificar al usuario y
@@ -164,13 +138,12 @@ namespace Examen9Noviembre
         /// Cambia la opacidad de los botones en ambas fotos, los desactiva, aumenta 
         /// el valor de los aciertos en 1, cambia el texto de aciertos y llama al
         /// método victoria
-        /// </summary>
+        /// </summary> 
         private void aciertoCuenco()
         {
             Cuenco2.Opacity = 1;
-            Cuenco1.Opacity = 1;
-            Cuenco1.IsEnabled = false;
             Cuenco2.IsEnabled = false;
+            Cuenco1.IsEnabled = false;
             puntos++;
             lblAciertos.Text = "Aciertos " + puntos;
             victoria();
@@ -183,10 +156,9 @@ namespace Examen9Noviembre
         /// </summary>
         private void aciertoEspalda()
         {
-            Espalda1.Opacity = 1;
             Espalda2.Opacity = 1;
-            Espalda1.IsEnabled = false;
             Espalda2.IsEnabled = false;
+            Espalda1.IsEnabled = false;
             puntos++;
             lblAciertos.Text = "Aciertos: " + puntos;
             victoria();
@@ -200,7 +172,6 @@ namespace Examen9Noviembre
         private void aciertoCaseta()
         {
             Caseta2.Opacity = 1;
-            Caseta1.Opacity = 1;
             Caseta2.IsEnabled = false;
             Caseta1.IsEnabled = false;
             puntos++;

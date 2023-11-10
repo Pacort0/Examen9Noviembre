@@ -26,20 +26,20 @@
                 </Image.GestureRecognizers>
             </Image>
             <AbsoluteLayout Grid.Column="0" Grid.Row="1">
-                <Button x:Name="Caseta1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.02,0.40,0.19,0.15" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Caseta1_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
-                <Button x:Name="Cuenco1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.39,0.95,0.16,0.15" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Cuenco1_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
-                <Button x:Name="Espalda1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.77,0.40,0.12,0.20" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Espalda1_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                <Button x:Name="Caseta1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.02,0.40,0.19,0.15" BindingContext="{x:Reference Caseta2}" 
+                 Opacity="{Binding Path=Opacity, Mode=TwoWay}" Clicked="Caseta_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                <Button x:Name="Cuenco1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.39,0.95,0.16,0.15" BindingContext="{x:Reference Cuenco2}" 
+                 Opacity="{Binding Path=Opacity, Mode=TwoWay}" Clicked="Cuenco_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                <Button x:Name="Espalda1" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.77,0.40,0.12,0.20" BindingContext="{x:Reference Espalda2}" 
+                 Opacity="{Binding Path=Opacity, Mode=TwoWay}" Clicked="Espalda_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
             </AbsoluteLayout>
             <AbsoluteLayout Grid.Column="1" Grid.Row="1">
                 <Button x:Name="Caseta2" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.02,0.40,0.19,0.15" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Caseta2_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                 Opacity="0" Clicked="Caseta_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
                 <Button x:Name="Cuenco2" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.39,0.95,0.16,0.15" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Cuenco2_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                Opacity="0" Clicked="Cuenco_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
                 <Button x:Name="Espalda2" Grid.Row="1" Grid.Column="0" AbsoluteLayout.LayoutBounds="0.77,0.40,0.12,0.20" 
-                AbsoluteLayout.LayoutFlags="All" Opacity="0" Clicked="Espalda2_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
+                 Opacity="0" Clicked="Espalda_Clicked" BorderColor="Red" BorderWidth="3" BackgroundColor="Transparent"/>
             </AbsoluteLayout>
             <HorizontalStackLayout Spacing="10" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="10">
                 <Label x:Name="lblAciertos" Text="Aciertos: 0" FontAttributes="Bold" FontSize="20"></Label>
